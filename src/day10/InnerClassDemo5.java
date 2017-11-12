@@ -52,6 +52,11 @@ class Outer5
 				// TODO Auto-generated method stub
 				
 			}
+			
+			public void show3()
+			{
+				
+			}
 		};
 		inter.show1();
 		inter.show2();
