@@ -7,7 +7,33 @@ package day11;
  */
 
 /*
+ * 连接数据库。
+ * 查询。Exception
+ * 关闭连接。
  * 
+ * 关闭数据库是我们以后一定要做的动作之一
+ * 
+ * try catch finally 代码块组合特点：
+ * 
+ * 1.try catch finally
+ * 
+ * 2.try catch(多个)当没有必要资源需要释放是，可以不用定义finally.
+ * 
+ * 3.try finally 异常无法直接catch处理，但是资源需要关闭。
+ * 
+ *
+ * void show()//throws Exception
+ * {
+ * 		try
+ * 		{
+ * 			//c开启资源
+ * 			throw new Exception();
+ * 		}
+ * 		finally
+ * 		{
+ * 			//关闭资源
+ * 		}
+ * }
  */
 
 class Demo5
@@ -33,9 +59,10 @@ public class ExceptionDemo5 {
 		catch (ArrayIndexOutOfBoundsException e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.toString());
-			return;//直接结束了程序
+//			return;//直接结束了程序
+//			System.exit(0);//退出jvm
 		}
-		finally//finally是一点定会执行的代码
+		finally//finally是一定会执行的代码,通常用于关闭（释放）资源
 		{
 			System.out.println("finally");
 		}
