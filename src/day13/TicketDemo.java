@@ -25,6 +25,13 @@ class Ticket implements Runnable //extends Thread
 			//因为在现实中的售票是没有出现负票的情况的
 			if(num > 0)
 			{
+				try {
+					Thread.sleep(10);
+
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				System.out.println(Thread.currentThread().getName() + ".....sale...." + num--);
 			}
 		}
@@ -51,8 +58,8 @@ public class TicketDemo {
 		
 		Thread t1 = new Thread(t);
 		Thread t2 = new Thread(t);
-		Thread t3 = new Thread(tt);
-		Thread t4 = new Thread(tt);
+		Thread t3 = new Thread(t);
+		Thread t4 = new Thread(t);
 		
 		t1.start();
 		t2.start();
